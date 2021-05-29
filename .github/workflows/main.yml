@@ -10,3 +10,8 @@ jobs:
       - uses: ./.github/actions/build
         with:
           MY_NAME: "Mona"
+      - name: show env
+        run: |
+          echo "PWD = '`pwd`'"
+          echo "===> LS:"
+          ls
