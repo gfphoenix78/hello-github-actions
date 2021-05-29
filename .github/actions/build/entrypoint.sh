@@ -16,8 +16,10 @@ pushd wireguard-windows
 make amd64/wireguard.exe x86/wireguard.exe
 popd
 
-cp wireguard-windows/amd64/wireguard.exe wg_64
+mkdir -p outputs
+cp wireguard-windows/amd64/wireguard.exe outputs/wireguard-amd64-v1.exe
+cp wireguard-windows/x86/wireguard.exe outputs/wireguard-x86-v1.exe
+
 echo "ALL IS WELL"
 echo "Hello world my name is $INPUT_MY_NAME"
-ls 
-ls -l wg*
+ls -l outputs/*
