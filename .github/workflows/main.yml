@@ -14,11 +14,20 @@ jobs:
         run: |
           echo "PWD = '`pwd`'"
           echo "===> LS:"
-          ls
+          ls outputs/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          title: "We are ready!"
           prerelease: false
+          automatic_release_tag: latest
           files: outputs/*
+
+      - name: show rel
+        run: |
+          echo "##############"
+          echo "SHOW ENV"
+          echo "##############"
+          env
 
 
