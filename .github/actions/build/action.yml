@@ -8,6 +8,12 @@ inputs:
     required: true
     default: "World"
 
+outputs:
+  wg_64:
+    description: "wg 64 bits"
+  wg_32:
+    description: "wg 32 bits"
+
 runs:
   using: "docker"
   image: "Dockerfile"
