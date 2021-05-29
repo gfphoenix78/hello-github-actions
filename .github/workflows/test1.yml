@@ -1,0 +1,21 @@
+name: Fetch private repo
+on: push
+
+jobs:
+  build:
+    name: build name
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+        with:
+          repository: git@github.com:gfphoenix78/plang.git
+          token: ${{ secrets.ACCESS_TOKEN }}
+          ref: master
+      - uses: actions/checkout@v1
+        with:
+          repository: feng92f/qusu.windows
+          token: ${{ secrets.ACCESS_TOKEN }}
+          ref: master
+
+
