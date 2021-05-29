@@ -9,12 +9,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./.github/actions/build
         with:
-          MY_NAME: "Mona"
-      - name: show env
-        run: |
-          echo "PWD = '`pwd`'"
-          echo "===> LS:"
-          ls outputs/
+          MESSAGE: "(Hello, Action! :-)"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -22,12 +17,6 @@ jobs:
           prerelease: false
           automatic_release_tag: latest
           files: outputs/*
-
-      - name: show rel
+      - name: show env
         run: |
-          echo "##############"
-          echo "SHOW ENV"
-          echo "##############"
-          env
-
-
+          echo "ALL IS WELL"

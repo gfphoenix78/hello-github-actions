@@ -20,6 +20,5 @@ mkdir -p outputs
 cp wireguard-windows/amd64/wireguard.exe outputs/wireguard-amd64-v1.exe
 cp wireguard-windows/x86/wireguard.exe outputs/wireguard-x86-v1.exe
 
-echo "ALL IS WELL"
-echo "Hello world my name is $INPUT_MY_NAME"
+echo "Hello, the message from world: $INPUT_MESSAGE"
 ls -l outputs/*
