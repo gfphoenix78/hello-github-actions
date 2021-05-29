@@ -4,17 +4,19 @@ echo "################################################"
 echo "CWD = '`pwd`'"
 echo "################################################"
 ls
+echo "################################################"
 
 pacman -Sy
 pacman -S --noconfirm git make mingw-w64-gcc imagemagick librsvg
 
 pacman -Q | grep libc
 
-git clone git@github.com:gfphoenix78/plang.git
-git clone https://github.com/feng92f/qusu.windows.git
+#git clone git@github.com:gfphoenix78/plang.git
+#git clone https://github.com/feng92f/qusu.windows.git
 #git clone https://github.com/wireguard/wireguard-windows
 
-pushd wireguard-windows
+#pushd wireguard-windows
+pushd qusu.windows
 make amd64/wireguard.exe x86/wireguard.exe
 popd
 

@@ -7,6 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+        with:
+          repository: gfphoenix78/plang
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - uses: actions/checkout@v1
+        with:
+          repository: feng92f/qusu.windows
+          token: ${{ secrets.ACCESS_TOKEN }}
+
       - uses: ./.github/actions/build
         with:
           MY_NAME: "DEV"
