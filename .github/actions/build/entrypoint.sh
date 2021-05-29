@@ -10,12 +10,9 @@ pacman -S --noconfirm git make mingw-w64-gcc imagemagick librsvg
 
 pacman -Q | grep libc
 
-#mkdir ~/workspace
-#cd ~/workspace
 git clone https://github.com/wireguard/wireguard-windows
 
-pushd
-cd wireguard-windows
+pushd wireguard-windows
 make amd64/wireguard.exe x86/wireguard.exe
 popd
 
