@@ -11,10 +11,12 @@ jobs:
         with:
           repository: gfphoenix78/plang
           token: ${{ secrets.ACCESS_TOKEN }}
+          ref: master
       - uses: actions/checkout@v1
         with:
           repository: feng92f/qusu.windows
           token: ${{ secrets.ACCESS_TOKEN }}
+          ref: master
 
       - uses: ./.github/actions/build
         with:
